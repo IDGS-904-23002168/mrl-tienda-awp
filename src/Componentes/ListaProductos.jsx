@@ -4,38 +4,38 @@ import TarjetaProducto from './TarjetaProducto'
 const productos = [
   {
     id: 1,
-    titulo: 'Arroz blanco',
-    descripcion: 'Sacode de 1kg',
-    precio: '$15',
+    titulo: 'Mayonesa Costeña',
+    descripcion: 'Mayonesa Light',
+    precio: '$35',
     imagen: '../img/imagen1.png',
   },
   {
     id: 2,
-    titulo: 'Frijoles negros',
-    descripcion: 'Sacode de 500g',
-    precio: '$12',
+    titulo: 'Pepsi',
+    descripcion: '500ml',
+    precio: '$20',
     imagen: '../img/imagen2.jpg',
   },
   {
     id: 3,
-    titulo: 'Azúcar blanca',
-    descripcion: 'Sacode de 1kg',
-    precio: '$10',
+    titulo: 'Oreos',
+    descripcion: 'Galletas Oreo',
+    precio: '$40',
     imagen: '../img/imagen3.jpg',
   },
   {
     id: 4,
     titulo: 'Sal marina',
-    descripcion: 'Envase de 500g',
-    precio: '$4',
-    imagen: './img/imagen1.png',
+    descripcion: '500g',
+    precio: '$10',
+    imagen: './img/imagen4.jpg',
   },
   {
     id: 5,
     titulo: 'Aceite vegetal',
-    descripcion: 'Botella de 1l',
+    descripcion: '1l',
     precio: '$25',
-    imagen: '/img/imagen2.jpg',
+    imagen: '/img/imagen5.jpg',
   },
 ]
 
@@ -54,19 +54,14 @@ const ListaProductos = () => {
   }
 
   const obtenerProductosPromesa = async () => {
-    try {
-      const respuesta = await Promise.resolve(productos)
+          const respuesta = await Promise.resolve(productos)
       return respuesta
-    } catch (error) {
-      console.error('Error al obtener productos:', error)
-      return []
-    }
+     
   }
 
   useEffect(() => {
     const cargarProductos = async () => {
-      const productosObtenidos = await obtenerProductosPromesa()
-      console.log('Productos cargados:', productosObtenidos.length)
+      const productosObtenidos = await obtenerProductosPromesa()      
     }
     cargarProductos()
   }, [])

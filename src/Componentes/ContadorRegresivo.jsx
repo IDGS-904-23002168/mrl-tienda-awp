@@ -29,7 +29,7 @@ const ContadorRegresivo = ({ tiempoInicial = 3 }) => {
     <div className="container text-center py-5">
       <h2>Bienvenido a la tienda</h2>
       <div className="display-1 fw-bold">{tiempoFormateado}</div>
-      <p>El catalogo se cargara en seguida...</p>
+      <p>Cargando</p>
     </div>
   )
 }
